@@ -1,0 +1,28 @@
+{
+  "name": "babel",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "node index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/yangkuo1993/babel.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/yangkuo1993/babel/issues"
+  },
+  "homepage": "https://github.com/yangkuo1993/babel#readme",
+  "devDependencies": {
+    "@babel/core": "^7.16.0",
+    "@babel/generator": "^7.16.0",
+    "@babel/parser": "^7.16.2",
+    "@babel/template": "^7.16.0",
+    "@babel/traverse": "^7.16.0",
+    "@babel/types": "^7.16.0"
+  }
+}
