@@ -6,9 +6,10 @@ const traverse = require('@babel/traverse').default;
 const generator = require('@babel/generator').default;
 const fs = require('fs');
 const path = require('path');
-const autoTrackPlugin = require('./plugins/auto-track-plugin');
+const autoTrackPlugin = require('./functionTrack/auto-track-plugin');
+const autoI18nPlugin = require('./i18ndemo/auto-i18n-plugin');
 
-const sourceCode = fs.readFileSync(path.join(__dirname, './sourceCode2.js'), {
+const sourceCode = fs.readFileSync(path.join(__dirname, './sourceCode3.js'), {
     encoding: 'utf8'
 });
 
@@ -33,8 +34,8 @@ const ast = parser.parse(sourceCode, {
 // });
 
 const {code} = transformFromAstSync(ast, sourceCode, {
-    plugins: [[autoTrackPlugin, {
-        trackerPath: 'tracker'
+    plugins: [[autoI18nPlugin, {
+        outputDir: './language/'
     }]]
 });
 
